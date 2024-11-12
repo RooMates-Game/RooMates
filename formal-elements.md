@@ -1,6 +1,6 @@
 <div dir='rtl' lang='he'>
 
-# כותרת ראשית: RooMates
+# RooMates
 
 **tagline: כמה אתם סומכים על החבר שלכם ?**
 
