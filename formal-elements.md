@@ -11,10 +11,6 @@
 המשחק מיועד לפלטפורמות מחשב.
 ![_adbb0e56-f8ee-4bbf-bfc6-e74939e46b10](https://github.com/user-attachments/assets/0ebccd44-e209-463b-8cc6-92c61f290a76)
 
-<img src="C:\Users\User\Downloads\_adbb0e56-f8ee-4bbf-bfc6-e74939e46b10.jpeg" alt="logo" style="width: 50%;">
-
-
-
 
 
 ---
