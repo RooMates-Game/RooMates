@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 80fafd05947c77c41964cb8e1de71a39
+guid: 5ceb69df5752436498e643bf26dab393
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2767659490094368485
-    second: heart-animation_0
+      213: 5577593271577080634
+    second: Screenshot 2024-08-26 145711_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: heart-animation_0
+      name: Screenshot 2024-08-26 145711_0
       rect:
         serializedVersion: 2
-        x: 98
-        y: 33
-        width: 545
-        height: 706
+        x: 0
+        y: 0
+        width: 163
+        height: 167
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b19bfa18b5c4799d0800000000000000
-      internalID: -2767659490094368485
+      spriteID: a33f5f57787976d40800000000000000
+      internalID: 5577593271577080634
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      heart-animation_0: -2767659490094368485
+      Screenshot 2024-08-26 145711_0: 5577593271577080634
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
