@@ -20,29 +20,30 @@ public class SmoothMover : MonoBehaviour
     [Tooltip("How many meters per second to move when action is pressed.")]
     private float speed =1;
 
-        private void Awake()
+       private void Awake()
     {
         // Auto-bind actions if no bindings are set
         if (moveRight.bindings.Count == 0)
         {
-            moveRight.AddBinding("<Keyboard>/d"); // Default: D key for moving right
+            moveRight.AddBinding("<Keyboard>/rightArrow"); // Right Arrow for moving right
         }
 
         if (moveLeft.bindings.Count == 0)
         {
-            moveLeft.AddBinding("<Keyboard>/a"); // Default: A key for moving left
+            moveLeft.AddBinding("<Keyboard>/leftArrow"); // Left Arrow for moving left
         }
 
         if (moveUp.bindings.Count == 0)
         {
-            moveUp.AddBinding("<Keyboard>/w"); // Default: W key for moving up
+            moveUp.AddBinding("<Keyboard>/upArrow"); // Up Arrow for moving up
         }
 
         if (moveDown.bindings.Count == 0)
         {
-            moveDown.AddBinding("<Keyboard>/s"); // Default: S key for moving down
+            moveDown.AddBinding("<Keyboard>/downArrow"); // Down Arrow for moving down
         }
     }
+
 
     private void OnEnable() {
         moveRight.Enable();
