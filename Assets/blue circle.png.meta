@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 407b9c348faf85349be8107c9829d54f
+guid: e4549607b0849234291bd06ac3ebb77b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5399578878048936367
-    second: City3_0
+      213: -4562968761137374826
+    second: blue circle_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: City3_0
+      name: blue circle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1080
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 15ed03d5e97d015b0800000000000000
-      internalID: -5399578878048936367
+      spriteID: 699d33f56141da0c0800000000000000
+      internalID: -4562968761137374826
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      City3_0: -5399578878048936367
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
