@@ -1,27 +1,36 @@
 using UnityEngine;
 
-public class Tilt : MonoBehaviour
+public class TiltingOscillator : MonoBehaviour
 {
-    // Oscillation parameters
-    [SerializeField] private float tiltAmount = 15f;  // Maximum tilt angle in degrees
-    [SerializeField] private float frequency = 1f;    // Oscillation frequency (cycles per second)
-    [SerializeField] private float centerPosition = 0f; // Starting position along the axis (X or Y)
+    public GameObject upperPart;           // Reference to the upper part of the object
+    public GameObject lowerPart;           // Reference to the lower part of the object
 
-    private float time;
+    public float oscillationSpeed = 2f;    // Speed of oscillation
+    public float tiltAngle = 30f;          // Maximum tilt angle (in degrees)
+    public float damping = 0.98f;          // Damping factor to reduce the oscillation over time
 
-    void Start()
+    private float currentAngle = 0f;       // Current angle of the lower part
+    private float angularVelocity = 0f;    // Current angular velocity
+
+    private void Update()
     {
-        // Set the initial position to the center position before starting the oscillation
-        transform.position = new Vector3(centerPosition, transform.position.y, transform.position.z);
-    }
+        // Simulate simple harmonic motion for the lower part
+        float angleTarget = Mathf.Sin(Time.time * oscillationSpeed) * tiltAngle;
 
-    void Update()
-    {
-        // Calculate the oscillation (left and right) based on the sine wave
-        time += Time.deltaTime;  // Increase time for smooth oscillation
-        float oscillation = Mathf.Sin(time * 2 * Mathf.PI * frequency) * tiltAmount;
+        // Apply damping to the angular velocity
+        angularVelocity *= damping;
 
-        // Apply the oscillation to the position (along the X-axis for horizontal movement)
-        transform.position = new Vector3(centerPosition + oscillation, transform.position.y, transform.position.z);
+        // Calculate the angular force to move the object towards the target angle
+        float angularAcceleration = (angleTarget - currentAngle) * oscillationSpeed;
+
+        // Update the angular velocity and current angle
+        angularVelocity += angularAcceleration * Time.deltaTime;
+        currentAngle += angularVelocity * Time.deltaTime;
+
+        // Apply the tilt only to the lower part (rotation around Z-axis)
+        lowerPart.transform.rotation = Quaternion.Euler(0f, 0f, currentAngle);
+
+        // Ensure the upper part stays fixed (no rotation)
+        upperPart.transform.rotation = Quaternion.identity;
     }
 }
