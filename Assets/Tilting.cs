@@ -1,36 +1,30 @@
 using UnityEngine;
 
-public class TiltingOscillator : MonoBehaviour
+public class Oscillator : MonoBehaviour
 {
-    public GameObject upperPart;           // Reference to the upper part of the object
-    public GameObject lowerPart;           // Reference to the lower part of the object
+    
+    [Tooltip("The maximum angle of oscillation (in degrees)")]
+    [SerializeField]public float maxAngle = 30f;
 
-    public float oscillationSpeed = 2f;    // Speed of oscillation
-    public float tiltAngle = 30f;          // Maximum tilt angle (in degrees)
-    public float damping = 0.98f;          // Damping factor to reduce the oscillation over time
+    [Tooltip("Speed of the oscillation (controls how fast the oscillation happens)")]
+    [SerializeField]public float speed = 2f;
 
-    private float currentAngle = 0f;       // Current angle of the lower part
-    private float angularVelocity = 0f;    // Current angular velocity
+    private float startRotationZ;
 
-    private void Update()
+    // Start is called before the first frame update
+    void Start()
     {
-        // Simulate simple harmonic motion for the lower part
-        float angleTarget = Mathf.Sin(Time.time * oscillationSpeed) * tiltAngle;
+        // Save the initial Z rotation of the object (to calculate oscillation from there)
+        startRotationZ = transform.rotation.eulerAngles.z;
+    }
 
-        // Apply damping to the angular velocity
-        angularVelocity *= damping;
+    // Update is called once per frame
+    void Update()
+    {
+        // Calculate the oscillation using a sine function to get a real world back and forth movement
+        float angle = Mathf.Sin(Time.time * speed) * maxAngle;
 
-        // Calculate the angular force to move the object towards the target angle
-        float angularAcceleration = (angleTarget - currentAngle) * oscillationSpeed;
-
-        // Update the angular velocity and current angle
-        angularVelocity += angularAcceleration * Time.deltaTime;
-        currentAngle += angularVelocity * Time.deltaTime;
-
-        // Apply the tilt only to the lower part (rotation around Z-axis)
-        lowerPart.transform.rotation = Quaternion.Euler(0f, 0f, currentAngle);
-
-        // Ensure the upper part stays fixed (no rotation)
-        upperPart.transform.rotation = Quaternion.identity;
+        // Apply the oscillation as rotation around the Z-axis (tilting left and right in 2D)
+        transform.rotation = Quaternion.Euler(0f, 0f, startRotationZ + angle);
     }
 }

@@ -3,10 +3,10 @@ using UnityEngine;
 public class Resize : MonoBehaviour
 {   
     
-    [SerializeField]public float maxScale = 0/7f;  // Maximum scale
+    [SerializeField]public float maxScale = 0.7f;  // Maximum scale
     [SerializeField]public float minScale = 0.2f; // Minimum scale
     [SerializeField]public float speed = 2f;     // Speed of scaling
-
+    [SerializeField]public float switchPoint = 0.01f;
     private bool isGrowing = true;  // Flag to check if the object is growing or shrinking
 
     // Update is called once per frame
@@ -22,7 +22,7 @@ public class Resize : MonoBehaviour
         transform.localScale = new Vector3(scale, scale, 1f);
 
         // Switch between growing and shrinking when the target scale is reached
-        if (Mathf.Abs(transform.localScale.x - targetScale) < 0.01f)
+        if (Mathf.Abs(transform.localScale.x - targetScale) < switchPoint)
         {
             isGrowing = !isGrowing;
         }
