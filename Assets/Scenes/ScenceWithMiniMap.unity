@@ -518,7 +518,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0
 --- !u!1 &1188186559
 GameObject:
@@ -672,6 +672,24 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Move Left
       m_Flags: 0
+    m_Flags: 0
+  moveUp:
+    m_Name: Move Up
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: 7811d271-ae3c-4a5a-85f0-f4a359761fd5
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  moveDown:
+    m_Name: Move Down
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: 10ef3306-45e4-4b06-a3bc-2dec20b32eeb
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
     m_Flags: 0
   speed: 1
 --- !u!4 &1367956638
@@ -878,6 +896,7 @@ GameObject:
   - component: {fileID: 1761382599}
   - component: {fileID: 1761382598}
   - component: {fileID: 1761382597}
+  - component: {fileID: 1761382601}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1004,6 +1023,18 @@ Transform:
   - {fileID: 166184823}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1761382601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761382596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207f952f135497042b72a1184078d85c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1775278823
 GameObject:
   m_ObjectHideFlags: 0
