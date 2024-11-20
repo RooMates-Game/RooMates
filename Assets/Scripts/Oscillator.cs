@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class Oscillator : MonoBehaviour
 {
-    
+
     [Tooltip("The maximum angle of oscillation (in degrees)")]
-    [SerializeField]public float maxAngle = 30f;
+    [SerializeField] public float maxAngle = 30f;
 
     [Tooltip("Speed of the oscillation (controls how fast the oscillation happens)")]
-    [SerializeField]public float speed = 2f;
+    [SerializeField] public float speed = 2f;
 
     private float startRotationZ;
 

@@ -1,12 +1,12 @@
 using UnityEngine;
 
 public class Resize : MonoBehaviour
-{   
-    
-    [SerializeField]public float maxScale = 0.7f;  // Maximum scale
-    [SerializeField]public float minScale = 0.2f; // Minimum scale
-    [SerializeField]public float speed = 2f;     // Speed of scaling
-    [SerializeField]public float switchPoint = 0.01f;
+{
+
+    [SerializeField] public float maxScale = 0.7f;  // Maximum scale
+    [SerializeField] public float minScale = 0.2f; // Minimum scale
+    [SerializeField] public float speed = 2f;     // Speed of scaling
+    [SerializeField] public float switchPoint = 0.01f;
     private bool isGrowing = true;  // Flag to check if the object is growing or shrinking
 
     // Update is called once per frame
