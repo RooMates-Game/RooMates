@@ -1,5 +1,11 @@
 # RooMates
 
+*************
+itch.io : 
+Question1: https://barmud.itch.io/assignement2-q1
+Question2 : https://barmud.itch.io/assignement2-q2
+*************
+
 **tagline:** כמה אתם סומכים על החבר שלכם?
 
 ## מהות המשחק
