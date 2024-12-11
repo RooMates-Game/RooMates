@@ -1,7 +1,7 @@
 # RooMates
 
 *************
-itch.io : 
+itch.io : https://barmud.itch.io/rommates
 
 *************
 
